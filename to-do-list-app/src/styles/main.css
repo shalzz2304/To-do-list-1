@@ -1,3 +1,29 @@
+/* Animated background circles */
+.bg-anim {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.25;
+    animation: float 12s infinite ease-in-out;
+}
+
+.bg-circle1 { width: 200px; height: 200px; background: #d28ed7; left: 10vw; top: 10vh; animation-delay: 0s;}
+.bg-circle2 { width: 300px; height: 300px; background: #43cea2; left: 60vw; top: 20vh; animation-delay: 2s;}
+.bg-circle3 { width: 150px; height: 150px; background: #f8ffae; left: 30vw; top: 70vh; animation-delay: 4s;}
+.bg-circle4 { width: 250px; height: 250px; background: #ca98e0; left: 80vw; top: 60vh; animation-delay: 6s;}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) scale(1);}
+    50% { transform: translateY(-40px) scale(1.1);}
+}
+
 /* Attractive To-Do List Styles */
 
 body {
@@ -74,8 +100,8 @@ h1 {
 }
 
 .task-item {
-    background: linear-gradient(90deg, #f8ffae 60%, #43cea2 100%);
-    color: #185a9d;
+    background: #ffe0ec;
+    color: #5e548e;
     margin-bottom: 16px;
     padding: 14px 18px;
     border-radius: 18px;
@@ -88,7 +114,7 @@ h1 {
 }
 
 .task-item:hover {
-    background: linear-gradient(90deg, #43cea2 60%, #f8ffae 100%);
+    background: linear-gradient(90deg, #a1c4fd 0%, #fcb69f 100%);
     transform: scale(1.03);
 }
 
@@ -107,4 +133,11 @@ h1 {
 
 .fade-out {
     animation: fade-out 0.4s forwards;
+}
+
+.task-icon {
+    color: #43cea2;
+    margin-right: 10px;
+    font-size: 1.2em;
+    vertical-align: middle;
 }

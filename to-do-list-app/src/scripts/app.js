@@ -13,8 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const taskText = taskInput.value.trim();
         if (taskText) {
             const taskItem = document.createElement('li');
-            taskItem.textContent = taskText;
             taskItem.classList.add('task-item');
+            // Add icon span
+            const icon = document.createElement('span');
+            icon.className = 'fa-regular fa-circle-check task-icon';
+            taskItem.appendChild(icon);
+            // Add text
+            const textNode = document.createTextNode(' ' + taskText);
+            taskItem.appendChild(textNode);
             taskList.appendChild(taskItem);
             taskInput.value = '';
             animateTask(taskItem);
@@ -24,9 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function removeTask(event) {
         if (event.target.classList.contains('task-item')) {
             const taskItem = event.target;
+            // Prevent multiple triggers
+            if (taskItem.classList.contains('fade-out')) return;
             taskItem.classList.add('fade-out');
-            taskItem.addEventListener('animationend', () => {
-                taskList.removeChild(taskItem);
+            // Remove after animation
+            taskItem.addEventListener('animationend', function handler() {
+                taskItem.removeEventListener('animationend', handler);
+                taskItem.remove();
             });
         }
     }
