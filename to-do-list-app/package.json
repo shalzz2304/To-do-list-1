@@ -1,0 +1,33 @@
+{
+  "name": "to-do-list-app",
+  "version": "1.0.0",
+  "description": "A visually appealing to-do list application with colors, layouts, and animations.",
+  "main": "src/scripts/app.js",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step not defined'",
+    "test": "echo 'Test step not defined'"
+  },
+  "keywords": [
+    "to-do",
+    "list",
+    "application",
+    "javascript",
+    "css",
+    "animations"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  },
+  "devDependencies": {},
+  "homepage": "https://github.com/yourusername/to-do-list-app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/to-do-list-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/to-do-list-app/issues"
+  }
+}
