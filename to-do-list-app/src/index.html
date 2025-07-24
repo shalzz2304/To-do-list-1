@@ -7,14 +7,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="bg-anim">
-        <div class="bg-circle bg-circle1"></div>
-        <div class="bg-circle bg-circle2"></div>
-        <div class="bg-circle bg-circle3"></div>
-        <div class="bg-circle bg-circle4"></div>
+    <div class="character-row">
+        <!-- Pen Character (center) -->
+        <div class="notebook-character float-center">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                <g>
+                    <rect x="36" y="10" width="8" height="45" rx="4" fill="#b5c0d0"/>
+                    <polygon points="36,55 44,55 40,70" fill="#22223b"/>
+                    <rect x="39" y="15" width="2" height="20" rx="1" fill="#fff" opacity="0.5"/>
+                    <ellipse cx="40" cy="25" rx="2" ry="2" fill="#fff"/>
+                    <ellipse cx="38.8" cy="25" rx="0.5" ry="0.5" fill="#22223b"/>
+                    <ellipse cx="41.2" cy="25" rx="0.5" ry="0.5" fill="#22223b"/>
+                    <path d="M39 27 Q40 28 41 27" stroke="#22223b" stroke-width="0.7" fill="none"/>
+                </g>
+            </svg>
+        </div>
+        <!-- Notebook Character (left) -->
+        <div class="notebook-character float-left">
+            <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
+                <rect x="8" y="10" width="44" height="60" rx="8" fill="#fff" stroke="#b5c0d0" stroke-width="2"/>
+                <line x1="16" y1="20" x2="44" y2="20" stroke="#d28ed7" stroke-width="2"/>
+                <line x1="16" y1="30" x2="44" y2="30" stroke="#d28ed7" stroke-width="2"/>
+                <line x1="16" y1="40" x2="44" y2="40" stroke="#d28ed7" stroke-width="2"/>
+                <ellipse cx="30" cy="55" rx="6" ry="3" fill="#b5c0d0"/>
+                <!-- Cute face -->
+                <ellipse cx="24" cy="35" rx="1" ry="1" fill="#22223b"/>
+                <ellipse cx="36" cy="35" rx="1" ry="1" fill="#22223b"/>
+                <path d="M26 38 Q30 41 34 38" stroke="#22223b" stroke-width="0.7" fill="none"/>
+            </svg>
+        </div>
+        <!-- Eraser Character (right) -->
+        <div class="notebook-character float-right">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                <rect x="15" y="20" width="30" height="18" rx="5" fill="#fcb69f" stroke="#b5c0d0" stroke-width="2" transform="rotate(15 30 30)"/>
+                <rect x="20" y="28" width="20" height="6" rx="2" fill="#fff" opacity="0.7" transform="rotate(15 30 30)"/>
+                <!-- Cute face -->
+                <ellipse cx="30" cy="30" rx="1.2" ry="1.2" fill="#22223b"/>
+                <ellipse cx="34" cy="32" rx="1.2" ry="1.2" fill="#22223b"/>
+                <path d="M31 34 Q32.5 36 34 34" stroke="#22223b" stroke-width="0.7" fill="none"/>
+            </svg>
+        </div>
     </div>
     <div class="todo-container">
-        <h1>My To-Do List</h1>
+        <h1>
+            <i class="fa-solid fa-pen-nib" style="color:#b5c0d0; margin-right:8px;"></i>
+            My To-Do List
+        </h1>
         <input id="task-input" type="text" placeholder="Add a new task...">
         <button id="add-task-button">Add</button>
         <ul id="task-list"></ul>
